@@ -1,0 +1,40 @@
+body {
+  background-color: #e5e5e5 !important;
+}
+
+.card-img-top {
+  height: 19 rem;
+}
+
+.font {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75px;
+  text-shadow: 1px 1px 2px white, 0 0 25px gray, 0 0 5px darkblue;
+}
+
+.back-ground-color {
+  background-color: pink;
+  height: 100%;
+}
+
+.buttonClick {
+  box-shadow: 2px 2px 4px #000;
+  border-radius: 17px;
+  background-color: #f98888;
+  border: white;
+  color: black;
+  padding: 15px;
+  text-align: center;
+  display: flex;
+  font-size: 15px;
+  margin: auto;
+}
+
+.img-auto {
+  width: 100%;
+  height: auto;
+}
