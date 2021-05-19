@@ -4,6 +4,8 @@ import Header from './header';
 import Setup from './setup';
 import Ballot from './ballot';
 import Vote from './vote';
+import Login from './login';
+import Registration from './registration';
 export default class App extends React.Component {
   constructor(props) {
     super(props);
@@ -39,14 +41,6 @@ export default class App extends React.Component {
     });
   }
 
-  // componentDidMount() {
-  //   fetch('/api/health-check')
-  //     .then(res => res.json())
-  //     .then(data => this.setState({ message: data.message || data.error }))
-  //     .catch(err => this.setState({ message: err.message }))
-  //     .finally(() => this.setState({ isLoading: false }));
-  // }
-
   render() {
 
     const viewType = this.state.view.name;
@@ -76,6 +70,20 @@ export default class App extends React.Component {
         <div>
           < Header />
           < Vote numberOfPeople={this.state.view.params} foodSug={this.state.foodSuggestions.restaurant} />
+        </div>
+      );
+    } else if (viewType === 'login') {
+      return (
+        <div>
+          <Header />
+          <Login view={this.setView} />
+        </div>
+      );
+    } else if (viewType === 'register') {
+      return (
+        <div>
+          <Header />
+          <Registration view={this.setView} />
         </div>
       );
     }

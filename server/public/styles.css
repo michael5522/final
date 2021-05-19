@@ -38,3 +38,13 @@ body {
   width: 100%;
   height: auto;
 }
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.login {
+  display: flex;
+  justify-content: center;
+}

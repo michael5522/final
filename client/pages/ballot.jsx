@@ -29,7 +29,7 @@ class Ballot extends React.Component {
     });
 
     this.props.res(oldData);
-    // alert('You have added: ' + this.state.value);
+    alert('You have added: ' + this.state.value);
     event.preventDefault();
   }
 
@@ -40,7 +40,8 @@ class Ballot extends React.Component {
 
   render() {
     const totalPpl = parseInt(this.props.numberOfPeople);
-    // console.log("current amount of people",totalPpl);
+    /* eslint-disable no-console */
+    console.log('current amount of people', totalPpl);
 
     if (this.state.amountOfPeople === totalPpl) {
       return (
