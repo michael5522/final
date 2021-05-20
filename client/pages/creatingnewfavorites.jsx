@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Header extends React.Component {
+class CreatingNewFavorites extends React.Component {
   constructor(props) {
     super(props);
     this.clickHandleHeader = this.clickHandleHeader.bind(this);
@@ -14,12 +14,9 @@ class Header extends React.Component {
   render() {
     return (
       <div>
-        <div className="nav">
-          <i className="fas fa-bars fa-3x" onClick={this.clickHandleHeader}></i>
-          {/* <button  onClick={this.clickHandle}> nav</button> */}
-        </div>
+        supposed to render here based on click
       </div>
     );
   }
 }
-export default Header;
+export default CreatingNewFavorites;

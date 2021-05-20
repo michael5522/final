@@ -123,6 +123,7 @@ class Registration extends React.Component {
 
         </form>
         <div className={color}>{text}</div>
+        <button>Click to Continue</button>
       </div>
     );
   }

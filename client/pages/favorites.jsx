@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Header extends React.Component {
+class Favorites extends React.Component {
   constructor(props) {
     super(props);
     this.clickHandleHeader = this.clickHandleHeader.bind(this);
@@ -22,4 +22,4 @@ class Header extends React.Component {
     );
   }
 }
-export default Header;
+export default Favorites;
