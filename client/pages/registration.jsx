@@ -4,7 +4,6 @@ class Registration extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: '',
       userName: '',
       firstName: '',
       lastName: '',
@@ -13,11 +12,7 @@ class Registration extends React.Component {
 
     };
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleChange1 = this.handleChange1.bind(this);
-    this.handleChange2 = this.handleChange2.bind(this);
-    this.handleChange3 = this.handleChange3.bind(this);
-    this.handleChange4 = this.handleChange4.bind(this);
-    this.handleChange5 = this.handleChange5.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   handleSubmit(event) {
@@ -27,38 +22,10 @@ class Registration extends React.Component {
   }
 
   handleChange(event) {
+    const name = event.target.name;
+    const value = event.target.value;
     this.setState({
-      value: event.target.value
-    });
-  }
-
-  handleChange1(event) {
-    this.setState({
-      userName: event.target.value
-    });
-  }
-
-  handleChange2(event) {
-    this.setState({
-      firstName: event.target.value
-    });
-  }
-
-  handleChange3(event) {
-    this.setState({
-      lastName: event.target.value
-    });
-  }
-
-  handleChange4(event) {
-    this.setState({
-      email: event.target.value
-    });
-  }
-
-  handleChange5(event) {
-    this.setState({
-      password: event.target.value
+      [name]: value
     });
   }
 
@@ -97,27 +64,27 @@ class Registration extends React.Component {
         <div>Create Account</div>
         <form onSubmit={this.handleSubmit}>
           <div>
-            <div>UserName:<input type="text" value={this.state.userName} onChange={this.handleChange1} />
-              <i className={` ${color} ${icon}`} /></div>
+            <div>UserName:<input type="text" name="userName" value={this.state.userName} onChange={this.handleChange} />
+              </div>
           </div>
 
           <div>
-            <div>First Name:<input type="text" value={this.state.firstName} onChange={this.handleChange2} />
-              <i className={` ${color} ${icon}`} /></div>
+            <div>First Name:<input type="text" name="firstName" value={this.state.firstName} onChange={this.handleChange} />
+              </div>
           </div>
 
           <div>
-            <div>Last Name:<input type="text" value={this.state.lastName} onChange={this.handleChange3} />
-              <i className={` ${color} ${icon}`} /></div>
+            <div>Last Name:<input type="text" name="lastName" value={this.state.lastName} onChange={this.handleChange} />
+              </div>
           </div>
 
           <div>
-            <div>Email:<input type="text" value={this.state.email} onChange={this.handleChange4} />
-              <i className={` ${color} ${icon}`} /></div>
+            <div>Email:<input type="text" name="email" value={this.state.email} onChange={this.handleChange} />
+              </div>
           </div>
 
           <div>
-            <div>Password<input type="text" value={this.state.password} onChange={this.handleChange5} />
+            <div>Password<input type="text" name="password" value={this.state.password} onChange={this.handleChange} />
               <i className={` ${color} ${icon}`} /></div>
           </div>
 
